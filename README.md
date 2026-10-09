@@ -14,7 +14,7 @@ npm test         # unit tests (SLA formatting, validation)
 ## Deliverables
 | | |
 |---|---|
-| Audit | [`docs/AUDIT.md`](docs/AUDIT.md) |
+| Audit | [`docs/AUDIT.md`](docs/AUDIT.md) (screenshots in `docs/screenshots/`) |
 | Figma | `<paste Figma link>` (build guide: [`docs/FIGMA_SPEC.md`](docs/FIGMA_SPEC.md)) |
 | Walkthrough video | `<paste link>` (script: [`docs/VIDEO_SCRIPT.md`](docs/VIDEO_SCRIPT.md)) |
 
