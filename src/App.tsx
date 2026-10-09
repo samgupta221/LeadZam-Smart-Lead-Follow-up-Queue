@@ -63,9 +63,10 @@ export default function App() {
   return (
     <div className="app">
       <nav className="side" aria-label="Main">
-        <div className="logo">LeadZam</div>
-        {["Dashboard", "Follow-up Queue", "All Leads", "Campaigns", "Call Logs", "Settings"].map(n => {
-          const on = n === "Follow-up Queue";
+        <div className="logo">Leadzam</div>
+        <div className="btn" style={{ textAlign: "center", marginBottom: 8, opacity: .6 }} aria-disabled="true" title="Outside prototype scope">+ Add Lead</div>
+        {["Admin Dashboard", "Forms", "All Leads", "Follow-ups", "Calls", "Reports", "WhatsApp", "Integrations", "Automations", "Settings"].map(n => {
+          const on = n === "Follow-ups";
           return (
             <div key={n} className={`nav ${on ? "on" : "stub"}`} aria-current={on ? "page" : undefined}
               title={on ? undefined : "Outside prototype scope"}>
