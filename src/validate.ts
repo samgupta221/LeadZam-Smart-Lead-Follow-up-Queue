@@ -1,5 +1,4 @@
 import { OUTCOMES } from "./data";
-/** Pure validation for the call-outcome dialog (unit-tested). */
 export function validate(key?: string, preset?: string, notes = ""): string[] {
   const out = OUTCOMES.find(o => o.key === key);
   if (!out) return ["Choose a call outcome."];

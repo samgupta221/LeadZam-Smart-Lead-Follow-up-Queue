@@ -1,4 +1,3 @@
-// Follow-up SLA chip per DESIGN.md: <15m → warning, negative → urgent (pulsing).
 export function fmt(min: number) {
   const a = Math.abs(min), h = Math.floor(a / 60), m = a % 60;
   return h >= 24 ? `${Math.floor(h / 24)}d` : h ? `${h}h ${m}m` : `${m}m`;
