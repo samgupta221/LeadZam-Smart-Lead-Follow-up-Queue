@@ -161,6 +161,11 @@ export default function App() {
           </div></>)}
         </main>
       </div>
+      <div className="mobilebar">
+        <div className="fast"><div><span className="meta" style={{ color: "#6ee7b7" }}>FAST LANE ●</span><div style={{ fontWeight: 600 }}>Auto-Dial: {pending[0]?.name ?? "queue empty"}</div></div>
+          <button className="btn ok sm" disabled={!pending.length} onClick={() => { setSelId(pending[0].id); setDialog(true); }}>⚡ Start</button></div>
+        <nav className="bnav" aria-label="Mobile">{["Queue", "Leads", "Dialer", "More"].map((n, i) => <div key={n} className={i === 0 ? "on" : ""} aria-current={i === 0 ? "page" : undefined}>{n}{i === 0 && <b>{all.length}</b>}</div>)}</nav>
+      </div>
       {dialog && sel && <DispositionDialog lead={sel} onClose={() => setDialog(false)} onSave={save} />}
     </div>
   );
