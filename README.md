@@ -8,13 +8,13 @@ React 18 · TypeScript · Vite · plain CSS (DESIGN.md tokens) · Vitest.
 npm install
 npm run dev      # http://localhost:5173
 npm run build    # type-check + production build
-npm test         # unit tests (SLA formatting, validation)
+npm test         # unit + UI tests (SLA, validation, queue flow)
 ```
 
 ## Deliverables
 | | |
 |---|---|
-| Audit | [`docs/AUDIT.md`](docs/AUDIT.md) (screenshots in `docs/screenshots/`) |
+| Audit | [`docs/UIUX_Audit.pdf`](docs/UIUX_Audit.pdf) (same content: [`docs/AUDIT.md`](docs/AUDIT.md); screenshots in `docs/screenshots/`) |
 | Figma | `<paste Figma link>` (build guide: [`docs/FIGMA_SPEC.md`](docs/FIGMA_SPEC.md)) |
 | Walkthrough video | `<paste link>` (script: [`docs/VIDEO_SCRIPT.md`](docs/VIDEO_SCRIPT.md)) |
 
