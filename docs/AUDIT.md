@@ -1,7 +1,7 @@
 # LeadZam UI/UX Audit
 
 **What I reviewed:** leadzam.com (hero, features, integrations, founder), the sign-up screen, the post-sign-up onboarding screen, and the Admin Dashboard of my own trial workspace (dummy data, empty workspace). Screenshots are in `docs/screenshots/`.
-**Limitation:** my workspace had 0 leads, so I could not capture a populated Follow-ups or Calls screen. Finding 1 is therefore backed by indirect evidence (see its "Evidence" line) and is marked for confirmation.
+**Limitation (stated openly):** my trial workspace had 0 leads, so the Follow-ups and Calls screens were empty and I did not audit their populated state. Finding 1 therefore rests on product-level evidence (onboarding choices, navigation structure, marketing claims) rather than on a populated screen, and I treat it as a design hypothesis to validate with real telecallers.
 
 | # | Finding | Where | Priority |
 |---|---|---|---|
@@ -18,7 +18,7 @@
 - **Screenshots:** `04-onboarding.png`, `07-sidebar-nav.png`, `02-site-features.png`
 - **User goal:** a telecaller or sales rep needs to know who to call next, call, record the result and schedule the next touch, many times a day.
 - **Evidence:** LeadZam itself offers "Follow up faster" as one of only five first goals, and sells call logs and follow-ups on the site, so this is a core job. In the sidebar, following up and calling live in two different places, so one call-and-log cycle likely spans two screens.
-- **Problem to confirm with a populated workspace:** how many clicks from "call ended" to "next call started", whether overdue leads look different from upcoming ones, and whether the outcome, note and next date can be saved in one step.
+- **Problem (hypothesis):** following up and calling are separate destinations, so one call-and-log cycle likely spans several screens; a rep needs urgency, the next lead and one-step logging in a single place. To validate: measure clicks from call end to next call, and whether outcome, note and next date save in one step.
 - **Why it matters:** repeated hundreds of times a day per rep, so small friction costs hours; missed follow-ups waste ad spend; logged outcomes feed the Offline-CAPI quality signals that LeadZam sells.
 - **Recommendation:** one queue sorted by urgency, one-step outcome logging, "Save & Next". **This is the redesign I built.**
 
@@ -26,10 +26,9 @@
 - **Where:** "Let's set up your workspace" after sign-up.
 - **Screenshot:** `04-onboarding.png`
 - **User goal:** finish setup quickly and reach the product.
-- **Problem:** two groups of pill options are shown, but the screen shows no Continue/Skip button, no step indicator, and no selected state is visible. A first-time user cannot tell whether choosing an option advances the page, whether answers are required, or how long this takes. The header is also empty (no logo).
+- **Problem:** two groups of pill options are shown, but the screen shows no Continue/Skip button, no step indicator, and no selected state is visible. A first-time user cannot tell from the screen whether choosing an option advances the page, whether answers are required, or how long this takes. The header is also empty (no logo or progress).
 - **Why it matters:** this is the first screen of a 14-day trial; if people stall here, activation drops before they see any value.
 - **Recommendation:** show a clear selected state, a primary "Continue" button (disabled until both questions are answered) and a "Skip for now" link, plus "Step 1 of 2".
-- *Confirm:* what happens after you tap an option (auto-advance or nothing)? If it auto-advances, the issue becomes missing feedback instead of a missing button.
 
 ## 3. First dashboard is empty states without guidance (Medium)
 - **Where:** Admin Dashboard on first login.
@@ -63,11 +62,20 @@
 Finding 2 is probably the quickest win but is a single screen with little interaction. Finding 1 is the repeated daily task of the highest-volume users and shows the most design thinking (states, keyboard speed, flow). I'd run Finding 2 as a quick A/B test.
 
 ## Real LeadZam vs my redesign (fit with the existing product)
-| Area | Real LeadZam app | My prototype | Action |
+The prototype follows my Figma mockups (Screens 1–3) one-to-one so design and code stay in sync (`docs/FIGMA_PARITY.md`). Differences from the live app that I would reconcile in production:
+
+| Area | Real LeadZam app | My redesign | Production step |
 |---|---|---|---|
-| Nav | `Follow-ups` item under WORKSPACE, blue "Add Lead" button, SETTINGS / OTHER groups | Prototype sidebar now mirrors the real item names and uses "Follow-ups" | done |
-| Brand colour | LeadZam blue | Indigo from DESIGN.md (`--ind` in `styles.css`) | swap `--ind` / `--ind-h` to the sampled brand blue (one variable) |
-| Cards | White cards, 1px light border, rounded, icon chip + uppercase label | same pattern | consistent |
-| Typography | Geometric sans (looks like DM Sans); uppercase micro-labels | Inter | switch font token to match |
-| Empty states | Blank chart grid | all-clear, empty filter and loading skeleton | pattern worth adopting in the dashboard |
-| Breadcrumb header | Home › page, trial chip, bell | not built | out of scope |
+| Nav | `Admin Dashboard, Forms, All Leads, Follow-ups, Calls, Reports…`, blue "Add Lead" button | Mockup nav: Dashboard, Follow-up Queue, All Leads, Campaigns, Call Logs, Settings | rename to the real labels, add the Add Lead button |
+| Brand colour | LeadZam blue | Indigo from DESIGN.md (`--ind`) | swap one token |
+| Typography | Geometric sans, uppercase micro-labels | Inter, same micro-label pattern | swap font token |
+| Cards | White, 1px light border, icon chip + uppercase label | same pattern | consistent |
+| Empty states | Blank chart grid (finding 3) | loading skeleton, empty filter, all-clear | reuse these patterns |
+
+## Redesign vs the mockups (Screens 1–3)
+| Mockup | Built in prototype |
+|---|---|
+| Screen 1: queue + detail pane | Header with Overdue / Due Today / Upcoming / Dialed goal, source tabs with dots, sort, three groups (4 / 9 / 5), Active Card, detail pane (immediate action, attribution, objective, touchpoints, rapid notes, tags) |
+| Screen 2: call outcome dialog | Six outcomes with hotkeys, schedule presets + date/time/host, notes + tag chips, pipeline progression, Discard / Save & Close / Save & Next |
+| Screen 3: all clear | Cleared hero, three next-action cards, completed activity log |
+| Mobile | Single-column below 768px; the bottom-nav and Fast-Lane bar are not built |

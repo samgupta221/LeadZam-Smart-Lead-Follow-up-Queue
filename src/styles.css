@@ -59,3 +59,25 @@ kbd{background:#fff;border:1px solid var(--b2);border-radius:4px;padding:0 6px;f
 @media(max-width:768px){.app{grid-template-columns:1fr}.side{flex-direction:row;overflow-x:auto;padding:8px}.logo{margin:0 8px 0 0}.outs{grid-template-columns:1fr 1fr}}
 
 .nav.stub{color:var(--sec);cursor:default;user-select:none}
+/* --- mockup parity (screen_1 / screen2 / screen3) --- */
+.app{grid-template-columns:240px minmax(0,1fr)}.rest{min-width:0;display:flex;flex-direction:column}
+.top{display:flex;gap:12px;align-items:center;padding:12px 24px;background:#fff;border-bottom:1px solid var(--b1);flex-wrap:wrap}
+.top .grow{max-width:320px}.user{display:flex;gap:8px;align-items:center;font-size:12px;line-height:16px}
+.queuepill{display:flex;justify-content:space-between;align-items:center;background:var(--sub);border-radius:6px;padding:8px 12px;font-size:11px;font-weight:600;margin-bottom:8px}
+.queuepill b{background:var(--ind);color:#fff;border-radius:9999px;padding:0 8px}
+.slacard{margin-top:auto;background:#eef2ff;border-radius:8px;padding:12px;display:flex;flex-direction:column}
+.head{align-items:flex-start}.stats{display:flex;gap:8px;flex-wrap:wrap;align-items:center}
+.goal{border:1px solid var(--b1);border-radius:6px;padding:4px 10px;display:flex;flex-direction:column;background:var(--bg)}
+.dot{display:inline-block;width:8px;height:8px;border-radius:9999px;margin-right:6px}
+.pill.act{margin-left:6px;background:var(--ind);color:#fff;border-color:var(--ind)}
+.row.sel{outline:2px solid var(--ind);background:#fff;border-left-color:var(--ind)}
+.due{display:flex;gap:6px;align-items:center;flex-wrap:wrap;background:var(--sub);border-radius:4px;padding:4px 8px;margin:4px 0;font-size:12px}
+.acts{display:flex;gap:6px;align-items:center}
+.panel{background:var(--sub);border-radius:6px;padding:12px;margin:12px 0}
+.trio{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+.cards3{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.hero{background:linear-gradient(135deg,#ecfdf5,#fff 60%)}
+table.log{width:100%;border-collapse:collapse;font-size:13px}.log th{text-align:left;background:var(--bg);font-size:11px;letter-spacing:.04em;text-transform:uppercase;color:var(--sec);padding:8px 16px}.log td{padding:8px 16px;border-top:1px solid var(--sub)}
+.modal{width:min(920px,100%)}
+@media(max-width:1024px){.cards3{grid-template-columns:1fr}}
+@media(max-width:768px){.app{grid-template-columns:1fr}.top{padding:8px 16px}.trio{grid-template-columns:1fr}.slacard,.queuepill{display:none}}

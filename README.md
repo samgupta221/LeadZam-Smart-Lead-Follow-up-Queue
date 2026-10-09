@@ -25,7 +25,7 @@ npm test         # unit tests (SLA formatting, validation)
 - **States**: loading skeleton, empty filter, all-caught-up, validation errors.
 - **Responsive**: detail pane stacks <1024px, sidebar → top bar <768px.
 - **A11y**: dialog semantics + autofocus, radiogroup outcomes, `aria-pressed` filters, progressbar, `role=alert` errors, reduced-motion, visible focus.
-- Non-queue nav items are intentional non-functional placeholders (out of scope).
+- Matches the Figma mockups (Screens 1–3), see [`docs/FIGMA_PARITY.md`](docs/FIGMA_PARITY.md). Other nav items are intentional placeholders. "Demo: clear queue" jumps to the all-clear state for review.
 
 ## Code map
 `App.tsx` (queue, filters, state) · `DispositionDialog.tsx` · `SlaChip.tsx` · `validate.ts` (pure, tested) · `data.ts` (mock data) · `styles.css` (tokens).
@@ -37,7 +37,7 @@ npm test         # unit tests (SLA formatting, validation)
 **Trade-offs.** Keyboard-first speed over discoverability (mitigated with visible `<kbd>` hints); one dialog instead of inline logging (simpler, but modal); mock data and no persistence; plain CSS instead of a design-system library to keep it explainable.
 **How it improves the task.** One list ordered by urgency, one step to log, required fields only when needed, and the next lead is selected automatically.
 **Validate before shipping.** Measure time-per-call-cycle and clicks from call end to next call; test whether reps use hotkeys; check that required notes don't cause skipped logs; verify overdue ordering with real SLA rules; screen-reader pass; test with 5 telecallers.
-**With 2 more hours.** Touchpoint history + rapid-notes in the detail pane, mobile Fast-Lane auto-dial bar, undo toast after save, Playwright test of the full flow, deployed preview.
+**With 2 more hours.** Mobile bottom-nav + Fast-Lane auto-dial bar, persistent notes, undo toast after save, Playwright test of the full flow, deployed preview.
 
 ## Analytics I'd track
 `queue_viewed`, `call_started`, `outcome_logged{outcome, seconds_since_call_end, via_hotkey}`, `save_and_next_used`, `validation_error{field}`, `queue_cleared`.
@@ -49,4 +49,4 @@ npm test         # unit tests (SLA formatting, validation)
 - **What I verified myself:** `<edit: tick only what you actually did>` ran build + tests; clicked every filter; keyboard-only run of the dialog; resized to mobile; compared SLA colours with DESIGN.md; confirmed audit items against my own trial workspace.
 
 ## Assumptions & limitations
-Mock data only; no telephony/persistence; "now" is fixed at load; in-app audit items rely on my trial workspace; Figma file is separate.
+Mock data only (18 leads); no telephony/persistence; "now" is fixed at load; in-app audit items rely on my trial workspace; Figma file is separate.
