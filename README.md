@@ -57,28 +57,6 @@ Open the local URL displayed in your terminal. Vite typically runs the applicati
 
 http://localhost:5173
 
-### 4. Build for Production
-
-```bash
-npm run build
-```
-
-This command checks the project and creates a production build in the `dist` directory.
-
-### 5. Run Tests
-
-```bash
-npm test
-```
-
-The test suite uses Vitest and React Testing Library to verify application logic and UI behavior.
-
-### 6. Preview the Production Build
-
-```bash
-npm run preview
-```
-
 ## Available Commands
 
 | Command | Description |
