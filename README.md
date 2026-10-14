@@ -53,44 +53,6 @@ LeadZam features a clean, professional dashboard with a sidebar, follow-up queue
 | React Testing Library | Testing UI behavior |
 | jsdom | Simulated browser environment for tests |
 
-## Getting Started
-
-Follow these instructions to run the project locally.
-
-### Prerequisites
-
-Make sure you have installed:
-
-- Node.js
-- npm
-- Visual Studio Code or another code editor
-
-### 1. Clone the Repository
-
-```bash
-git clone YOUR_GITHUB_REPOSITORY_URL
-```
-
-Navigate into the project directory:
-
-```bash
-cd leadzam-queue
-```
-
-Replace `YOUR_GITHUB_REPOSITORY_URL` with your actual GitHub repository URL.
-
-### 2. Install Dependencies
-
-```bash
-npm install
-```
-
-### 3. Start the Development Server
-
-```bash
-npm run dev
-```
-
 Open the local URL displayed in your terminal. Vite typically runs the application at:
 
 http://localhost:5173
