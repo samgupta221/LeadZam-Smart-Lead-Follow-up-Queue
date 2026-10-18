@@ -57,16 +57,6 @@ Open the local URL displayed in your terminal. Vite typically runs the applicati
 
 http://localhost:5173
 
-## Available Commands
-
-| Command | Description |
-|---|---|
-| `npm install` | Installs project dependencies |
-| `npm run dev` | Starts the development server |
-| `npm run build` | Creates a production build |
-| `npm test` | Runs the test suite |
-| `npm run preview` | Previews the production build |
-
 ## How to Use the Application
 
 1. Open the LeadZam dashboard.
@@ -78,8 +68,6 @@ http://localhost:5173
 7. Record call notes and select the appropriate call outcome.
 8. Schedule another follow-up when required.
 9. Save the outcome and proceed to the next lead.
-
-**Note:** Calling, email, and WhatsApp actions may be simulated in the current prototype. Actual functionality depends on the integrations implemented in the project.
 
 ## Project Structure
 
@@ -108,8 +96,6 @@ leadzam-queue/
 ├── vite.config.ts
 └── README.md
 ```
-
-*Note: This is an illustrative structure. Keep only the directories and files that actually exist in your repository.*
 
 ## Core Components
 
