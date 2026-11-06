@@ -172,8 +172,3 @@ This project demonstrates practical experience with:
 - UI/UX design implementation.
 - Sales workflow optimization.
 
-## Design and Resources
-
-- **Figma Design:** [LeadZam – UI/UX Design](https://www.figma.com/design/fwt5tZ9XkTZtNqLcpIePIS/LeadZam?node-id=0-1&t=7ImmZCaZ38VVdO3q-1)
-- GitHub Repository:https://github.com/samgupta221/LeadZam-Smart-Lead-Follow-up-Queue
-
