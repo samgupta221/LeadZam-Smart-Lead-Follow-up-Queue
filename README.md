@@ -68,34 +68,6 @@ http://localhost:5173
 8. Schedule another follow-up when required.
 9. Save the outcome and proceed to the next lead.
 
-## Project Structure
-
-```text
-leadzam-queue/
-├── src/
-│   ├── App.tsx
-│   ├── AllClear.tsx
-│   ├── DispositionDialog.tsx
-│   ├── SlaChip.tsx
-│   ├── data.ts
-│   ├── validate.ts
-│   ├── logic.test.ts
-│   ├── App.test.tsx
-│   ├── styles.css
-│   └── main.tsx
-├── docs/
-│   ├── AUDIT.md
-│   ├── FIGMA_SPEC.md
-│   ├── FIGMA_PARITY.md
-│   └── VIDEO_SCRIPT.md
-├── index.html
-├── package.json
-├── package-lock.json
-├── tsconfig.json
-├── vite.config.ts
-└── README.md
-```
-
 ## User Experience and Design
 
 LeadZam is designed around a simple sales workflow:
