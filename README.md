@@ -39,7 +39,6 @@ LeadZam features a clean, professional dashboard with a sidebar, follow-up queue
 - **Save and Next Workflow:** Move efficiently to the next lead after logging an outcome.
 - **Loading and Empty States:** Provides feedback for loading, validation errors, and an empty queue.
 - **Responsive Design:** Adapts the interface for different screen sizes.
-- **Accessibility:** Supports keyboard navigation, visible focus states, and reduced-motion preferences.
 
 ## Tech Stack
 
@@ -97,29 +96,6 @@ leadzam-queue/
 └── README.md
 ```
 
-## Core Components
-
-### App.tsx
-Manages the main dashboard, queue state, lead selection, filtering, and follow-up workflow.
-
-### DispositionDialog.tsx
-Provides the call-outcome dialog, outcome selection, and follow-up scheduling workflow.
-
-### SlaChip.tsx
-Displays visual indicators for overdue and upcoming follow-ups.
-
-### AllClear.tsx
-Displays the completed or all-caught-up state when there are no remaining actionable leads.
-
-### data.ts
-Contains the sample lead records used to demonstrate the dashboard.
-
-### validate.ts
-Contains reusable validation logic for user inputs and call outcomes.
-
-### styles.css
-Defines the visual design, colors, spacing, cards, status indicators, and responsive layouts.
-
 ## User Experience and Design
 
 LeadZam is designed around a simple sales workflow:
@@ -137,18 +113,6 @@ The interface emphasizes urgent tasks, reduces unnecessary navigation, and keeps
 - Keyboard-friendly call logging.
 - Responsive layouts for different screen sizes.
 - UI/UX design reference available in Figma.
-
-## Testing
-
-The project includes tests for application logic and user interface behavior.
-
-Run the test suite:
-
-```bash
-npm test
-```
-
-Testing can cover validation rules, SLA-related logic, filtering, and queue interactions. Run the suite locally to verify the actual test results before publishing the project.
 
 ## Current Limitations
 
